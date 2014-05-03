@@ -13,7 +13,7 @@ Then visit `http://localhost:9090/` and you should see an error page saying
 "ArgumentError at /: invalid byte sequence in US-ASCII". The error is reported
 as coming from `parade-0.10.2/lib/parade/parsers/dsl.rb:36`, where
 `eval(contents)` is called. If you log what `contents` is, you'll see it's the
-content of the `parade` file with encoding `US-ASCII`, which is the encoded
+content of the `parade` file with encoding `US-ASCII`, which is the encoding
 assumed if `LANG` and `LC_ALL` are unset.
 
 This file `parade` only contains bytes less than `0x80` and is thus a valid
